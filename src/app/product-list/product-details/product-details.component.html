@@ -1,0 +1,18 @@
+<div class="container">
+  <div *ngIf="product; &quot;no-product&quot;" class="row">
+    <div class="col-lg-12">
+      <h3 class="title">{{ product?.title }}</h3>
+      <div class="price">{{ product?.price | priceFormat }}</div>
+      <p class="description">{{ product?.description }}</p>
+      <p *ngIf="product.type === 'variant'" class="variants">VARIANTS</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <a class="btn btn-primary" routerLink="/">Back</a>
+    </div>
+  </div>
+  <ng-template no-product>
+    <div class="col-lg-12">No product details!</div>
+  </ng-template>
+</div>

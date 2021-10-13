@@ -1,0 +1,10 @@
+app-product-list {
+  > .container {
+    margin-top: 1rem;
+  }
+
+  .headline-list .bi-arrow-right-circle {
+    float: right;
+    margin-top: 0.5rem;
+  }
+}

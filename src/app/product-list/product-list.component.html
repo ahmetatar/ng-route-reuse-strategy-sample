@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>Inventory</h3>
+      <hr />
+      <app-product-search></app-product-search>
+      <div class="list-group headline-list">
+        <a
+          *ngFor="let product of (products$ | async)"
+          [routerLink]="['./', product._id]"
+          href="#"
+          class="list-group-item list-group-item-action"
+          aria-current="true"
+        >
+          <app-product-item [product]="product"></app-product-item>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
